@@ -10,9 +10,9 @@ namespace Snake
 	{
 		static void Main( string[] args )
 		{
-			Console.SetBufferSize( 80, 25 );
+			Console.SetBufferSize(120, 30);
 
-			Walls walls = new Walls( 80, 25 );
+			Walls walls = new Walls(120, 30);
 			walls.Draw();
 
 			// Отрисовка точек			
@@ -40,7 +40,7 @@ namespace Snake
 					snake.Move();
 				}
 
-				Thread.Sleep( 100 );
+				Thread.Sleep( 50 );
 				if ( Console.KeyAvailable )
 				{
 					ConsoleKeyInfo key = Console.ReadKey();
@@ -61,8 +61,7 @@ namespace Snake
 			WriteText( "============================", xOffset, yOffset++ );
 			WriteText( "И Г Р А    О К О Н Ч Е Н А", xOffset + 1, yOffset++ );
 			yOffset++;
-			WriteText( "Автор: Евгений Картавец", xOffset + 2, yOffset++ );
-			WriteText( "Специально для GeekBrains", xOffset + 1, yOffset++ );
+			WriteText( "Автор: Нечаев Сергей", xOffset + 2, yOffset++ );
 			WriteText( "============================", xOffset, yOffset++ );
 		}
 
